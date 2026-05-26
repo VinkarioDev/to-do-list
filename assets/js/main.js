@@ -1,12 +1,20 @@
 const button = document.querySelector("#botao");
 const ul = document.querySelector(".ul");
 const mytasks = [];
+const form = document.querySelector(".form");
+
+const criaLi = () => document.createElement("li");
+const deleteButton = () => document.createElement("button");
+const editbutton = () => document.createElement("button");
+const saveEditButton = () => document.createElement("button");
+const divButtons = () => document.createElement("div");
 
 button.addEventListener("click", () => {
-  const li = document.createElement("li");
-  const remove = document.createElement("button");
-  const edit = document.createElement("button");
-  const divControls = document.createElement("div");
+  const remove = deleteButton();
+  const edit = editbutton();
+  const saveEdit = saveEditButton();
+  const divControls = divButtons();
+  const li = criaLi();
   divControls.classList.add("divControls");
   let contentInput = document.querySelector("#input");
 
@@ -32,9 +40,19 @@ button.addEventListener("click", () => {
     });
 
     edit.addEventListener("click", () => {
-       divControls.remove()
-      contentInput.value = li.textContent;
-     
+      contentInput.value = li.firstChild ? li.firstChild.nodeValue.trim() : "";
+      button.remove();
+      form.appendChild(saveEdit);
+      saveEdit.innerHTML = "Editar Tarefa";
+
+      saveEdit.addEventListener("click", (e) => {
+        e.preventDefault();
+        li.innerHTML = contentInput.value;
+        contentInput.value=''
+        saveEdit.remove();
+        li.appendChild(divControls)
+        form.appendChild(button);
+      });
     });
   }
 });
