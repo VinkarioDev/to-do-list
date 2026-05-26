@@ -17,7 +17,7 @@ body {
   padding: 30px;
   margin: 50px auto;
   background-color: #fff;
-  width: 100vh;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8); 
 }
@@ -49,7 +49,7 @@ body {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  width: 300px;
+  max-width: 300px;
   outline: none;
   border: 1px solid #ccc;
 }
@@ -64,7 +64,7 @@ body {
 .input-to-do-list  button {
   background-color:#8100ba;
   color: #fff;
-  width: 200px;
+  max-width: 200px;
   padding: 10px;
   border: none;
   cursor: pointer;
