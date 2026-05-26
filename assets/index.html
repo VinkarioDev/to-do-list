@@ -16,12 +16,20 @@
     <div class="container">
       <h1>To do list</h1>
       <div class="input-to-do-list">
-        <input type="text" name="" id="input" minlength="5" maxlength="30" placeholder="Digite a task" />
-        <button id="botao">Adicionar Tarefa</button>
+        <form class="form" action="">
+          <input
+            autocomplete="off"
+            required
+            type="text"
+            id="input"
+            minlength="5"
+            maxlength="30"
+            placeholder="Digite a task"
+          />
+          <button type="submit" id="botao">Adicionar Tarefa</button>
+        </form>
       </div>
-      <ul class="ul">
-        <span class="span"></span>
-      </ul>
+      <ul class="ul"></ul>
     </div>
 
     <script src="js/main.js"></script>
