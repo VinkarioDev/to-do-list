@@ -17,7 +17,8 @@ body {
   padding: 30px;
   margin: 50px auto;
   background-color: #fff;
-  max-width: 500px;
+  min-width: 300px;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8); 
 }
@@ -52,7 +53,8 @@ body {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  min-width: 250px;
+  max-width: 200px;
+  min-width: 150px;
   outline: none;
   border: 1px solid #ccc;
 }
