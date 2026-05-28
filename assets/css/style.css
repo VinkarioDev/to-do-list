@@ -12,17 +12,17 @@ body {
     rgba(138, 0, 196, 1),
     rgba(46, 0, 85, 1)
   );
-  min-height: 100vh; /* Garante que o gradiente ocupe a tela toda */
+  min-height: 100vh;
 }
 
 .container {
   padding: 20px;
   margin: 40px auto;
   background-color: #fff;
-  width: 100%; /* Ocupa a largura disponível */
-  max-width: 450px; /* Limite para telas grandes */
+  width: 100%;
+  max-width: 450px;
   border-radius: 15px;
-  box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8); 
+  box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,20 +34,23 @@ body {
   margin-bottom: 20px;
 }
 
-/* Corrigido: Removido o width fixo de 500px que quebrava o layout */
 .form {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 100%; 
+  width: 100%;
 }
 
-/* Simplificado: Deixando o flexbox trabalhar com a largura total */
 .input-to-do-list {
   display: flex;
   align-items: center;
   width: 100%;
   gap: 10px;
+}
+
+.error-placeholder input{
+  border: 1px solid red;
+  transition: 300ms ease-in-out;
 }
 
 .error-placeholder::placeholder {
@@ -56,7 +59,7 @@ body {
 }
 
 .input-to-do-list input {
-  flex: 1; /* Faz o input ocupar todo o espaço restante */
+  flex: 1;
   padding: 10px;
   height: 45px;
   outline: none;
@@ -65,8 +68,14 @@ body {
   transition: border-color 300ms ease-in-out;
 }
 
+
 .input-to-do-list input:focus {
   border-color: #8100ba;
+}
+
+.input-to-do-list input:focus::placeholder {
+  color: #8100ba;
+  transition: 300ms ease-in-out;
 }
 
 .input-to-do-list button {
@@ -96,7 +105,7 @@ ul li {
   align-items: center;
   justify-content: space-between;
   padding: 8px 0;
-  border-bottom: 1px solid #eee; /* Linha sutil para separar as tarefas */
+  border-bottom: 1px solid #eee; 
 }
 
 .divControls {
@@ -125,15 +134,4 @@ ul li {
 
 .divControls button:nth-child(2):hover {
   color: #8100ba;
-}
-
-/* Opcional: Ajustes finos para telas muito pequenas (Mobile antigo) */
-@media (max-width: 360px) {
-  .container {
-    padding: 15px;
-  }
-  
-  .input-to-do-list {
-    gap: 5px;
-  }
 }
