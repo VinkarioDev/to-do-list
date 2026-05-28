@@ -28,6 +28,7 @@ function adicionaTarefa() {
     divControls.classList.add("divControls");
     remove.innerHTML = "X";
     edit.innerHTML = "EDIT";
+    li.style.borderBottom='1px solid #8100ba'
 
     remove.addEventListener("click", () => {
       removeTarefa(li);
@@ -49,7 +50,7 @@ function editaTarefa(liRef) {
     : "";
   button.remove();
   form.appendChild(saveEdit);
-  saveEdit.innerHTML = "Editar Tarefa";
+  saveEdit.innerHTML = "Editar";
 
   saveEdit.addEventListener("click", (e) => {
     e.preventDefault();

@@ -17,10 +17,14 @@ body {
   padding: 30px;
   margin: 50px auto;
   background-color: #fff;
-  min-width: 200px;
-  max-width: 300px;
+  min-width: 400px;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container h1{
@@ -38,10 +42,14 @@ body {
 .input-to-do-list {
   display: flex;
   align-items: center;
+  min-width: 200px;
+  max-width: 340px;
   justify-content: center;
   padding: 20px;
   gap: 15px;
 }
+
+
 
 .error-placeholder::placeholder{
   color: red;
@@ -49,11 +57,12 @@ body {
   
 }
 
+
 .input-to-do-list input {
   padding: 5px;
   border: none;
   border-radius: 5px;
-  max-width: 100px;
+  max-width: 200px;
   min-width: 80px;
   height: 50px;
   outline: none;
@@ -67,10 +76,11 @@ body {
 
 
 
+
 .input-to-do-list  button {
   background-color:#8100ba;
   color: #fff;
-  max-width: 300px;
+  min-width: 130px;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -84,45 +94,44 @@ body {
 ul {
   margin-left: 20px;
 
+
 }
 
 ul li {
   list-style: none;
-  max-width: 400px;
-  padding: 5px;
-  margin-top: 5px;
+  min-width: 320px;
   display: flex;
   align-items: center;
-  color: #8100ba;
-  justify-content: space-between;
+  margin-bottom: 10px;
+  justify-content:space-between;
 }
 
 .divControls {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 15px;
 }
 
 .divControls button {
-  margin-left: 10px;
   width: 50px;
-  color:#8100ba;
-  border: none;
   cursor: pointer;
   border-radius: 2px;
   padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #8100ba;
+  border: none;
+  background-color: #fff;
 }
 
 .divControls button:nth-child(1):hover{
-  background-color: rgb(235, 79, 79);
+  color: rgb(235, 79, 79);
   border: none;
+  font-weight: bolder;
 }
 
-ul li button:hover{
-  background-color: #8100ba;
-  color: #fff;
-  transition: 300ms ease-in-out all;
- 
+.divControls button:nth-child(2):hover{
+  color: #8100ba;
+  font-weight: bolder;
 }
+
+
