@@ -17,7 +17,7 @@ body {
   padding: 30px;
   margin: 50px auto;
   background-color: #fff;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 15px;
   box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8); 
 }
@@ -29,7 +29,9 @@ body {
 
 .form{
   display: flex;
+  justify-content: space-between;
   gap: 10px;
+  width: 500px;
 }
 
 .input-to-do-list {
@@ -43,13 +45,14 @@ body {
 .error-placeholder::placeholder{
   color: red;
   font-style: italic;
+  
 }
 
 .input-to-do-list input {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  max-width: 300px;
+  min-width: 250px;
   outline: none;
   border: 1px solid #ccc;
 }
@@ -64,7 +67,7 @@ body {
 .input-to-do-list  button {
   background-color:#8100ba;
   color: #fff;
-  max-width: 200px;
+  max-width: 300px;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -77,14 +80,16 @@ body {
 
 ul {
   margin-left: 20px;
+
 }
 
 ul li {
   list-style: none;
-  max-width: 200px;
+  max-width: 400px;
   padding: 5px;
   margin-top: 5px;
   display: flex;
+  align-items: center;
   color: #8100ba;
   justify-content: space-between;
 }
@@ -99,9 +104,17 @@ ul li {
   color:#8100ba;
   border: none;
   cursor: pointer;
-   border-radius: 2px;
-   padding: 5px;
-   display: flex;
+  border-radius: 2px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8100ba;
+}
+
+.divControls button:nth-child(1):hover{
+  background-color: rgb(235, 79, 79);
+  border: none;
 }
 
 ul li button:hover{
