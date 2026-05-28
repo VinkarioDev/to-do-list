@@ -6,6 +6,7 @@
 }
 
 body {
+  padding: 20px;
   background: linear-gradient(
     to right,
     rgba(138, 0, 196, 1),
