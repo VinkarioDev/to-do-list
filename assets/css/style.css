@@ -12,126 +12,128 @@ body {
     rgba(138, 0, 196, 1),
     rgba(46, 0, 85, 1)
   );
+  min-height: 100vh; /* Garante que o gradiente ocupe a tela toda */
 }
 
 .container {
-  padding: 30px;
-  margin: 50px auto;
+  padding: 20px;
+  margin: 40px auto;
   background-color: #fff;
-  min-width: 200px;
-  max-width: 400px;
+  width: 100%; /* Ocupa a largura disponível */
+  max-width: 450px; /* Limite para telas grandes */
   border-radius: 15px;
   box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.8); 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.container h1{
+.container h1 {
   text-align: center;
   color: #8100ba;
+  margin-bottom: 20px;
 }
 
-.form{
+/* Corrigido: Removido o width fixo de 500px que quebrava o layout */
+.form {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 500px;
+  width: 100%; 
 }
 
+/* Simplificado: Deixando o flexbox trabalhar com a largura total */
 .input-to-do-list {
   display: flex;
   align-items: center;
-  min-width: 200px;
-  max-width: 340px;
-  justify-content: center;
-  padding: 20px;
-  gap: 15px;
+  width: 100%;
+  gap: 10px;
 }
 
-
-
-.error-placeholder::placeholder{
+.error-placeholder::placeholder {
   color: red;
   font-style: italic;
-  
 }
 
-
 .input-to-do-list input {
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  max-width: 150px;
-  min-width: 80px;
-  height: 50px;
+  flex: 1; /* Faz o input ocupar todo o espaço restante */
+  padding: 10px;
+  height: 45px;
   outline: none;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 300ms ease-in-out;
 }
 
 .input-to-do-list input:focus {
-  border: 1px solid #8100ba;
-  transition: 300ms ease-in-out all;
+  border-color: #8100ba;
 }
 
-
-
-
-.input-to-do-list  button {
-  background-color:#8100ba;
+.input-to-do-list button {
+  background-color: #8100ba;
   color: #fff;
-  min-width: 80px;
+  padding: 0 15px;
+  height: 45px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.2s;
 }
 
-.input-to-do-list button:hover{
+.input-to-do-list button:hover {
   background-color: #4b0469;
 }
 
 ul {
-  margin-left: 20px;
-
-
+  width: 100%;
+  margin-top: 20px;
 }
 
 ul li {
   list-style: none;
-  min-width: 320px;
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  justify-content:space-between;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee; /* Linha sutil para separar as tarefas */
 }
 
 .divControls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
-  margin-right: 15px;
 }
 
 .divControls button {
-  width: 50px;
+  width: 40px;
+  height: 30px;
   cursor: pointer;
-  border-radius: 2px;
-  padding: 5px;
+  border-radius: 4px;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
+  transition: color 0.2s;
 }
 
-.divControls button:nth-child(1):hover{
+.divControls button:none:hover {
+  font-weight: bold;
+}
+
+.divControls button:nth-child(1):hover {
   color: rgb(235, 79, 79);
-  border: none;
-  font-weight: bolder;
 }
 
-.divControls button:nth-child(2):hover{
+.divControls button:nth-child(2):hover {
   color: #8100ba;
-  font-weight: bolder;
 }
 
-
+/* Opcional: Ajustes finos para telas muito pequenas (Mobile antigo) */
+@media (max-width: 360px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .input-to-do-list {
+    gap: 5px;
+  }
+}
